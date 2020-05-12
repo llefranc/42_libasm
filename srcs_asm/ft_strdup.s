@@ -13,10 +13,12 @@ loop_s1_len:
 	inc rdx							; increment rdx to have the len of s1
 	cmp byte [rdi + rdx - 1], 0
 	jne loop_s1_len					; loop until we met s1 '\0'
-	push rdi						; saving on stack rdi because malloc func call
+	
+	push rdi						; save-caller register
 	mov rdi, rdx					; first arg of malloc (len s1 + 1 for '\0')
 	call _malloc
-	pop rdi							; taking back from stack saved rdi value
+	pop rdi							; restore save-caller register
+	
 	cmp rax, 0						; check if malloc return value is not NULL ptr
 	jne copy_s1						; if no malloc error we jump to copy instruction
 
@@ -24,6 +26,7 @@ loop_s1_len:
 	sub rsp, 8						; align the stack
 	call ___error					; for setting errno var (from errno.h)
 	add rsp, 8
+	
 	mov dword [rax], 12				; set errno value (number 12 ENOMEM, out of memory)
 	xor rax, rax					; return NULL
 	ret

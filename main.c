@@ -6,7 +6,7 @@
 /*   By: lucaslefrancq <lucaslefrancq@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 12:35:43 by lucaslefran       #+#    #+#             */
-/*   Updated: 2020/05/12 06:47:03 by lucaslefran      ###   ########.fr       */
+/*   Updated: 2020/05/12 07:23:30 by lucaslefran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,27 +39,6 @@ int 	ft_list_size(t_list *begin_list);
 void 	ft_list_sort(t_list **begin_list, int (*cmp)());
 void	ft_list_remove_if(t_list **begin_list, void *data_ref, 
 				int (*cmp)(), void (*free_fct)(void *));
-
-char	*ft_strdup(const char *s1)
-{
-	char	*strcpy;
-	size_t	len;
-
-	strcpy = NULL;
-	len = 0;
-	while (s1[len])
-		len++;
-	if (!(strcpy = malloc(sizeof(*s1) * (len + 1))))
-		return (NULL);
-	len = 0;
-	while (s1[len])
-	{
-		strcpy[len] = s1[len];
-		len++;
-	}
-	strcpy[len] = '\0';
-	return (strcpy);
-}
 
 t_list	*ft_create_elem(void *data)
 {
@@ -161,7 +140,7 @@ int		main(int ac, char **av)
 	//-------ft_list_size-------
 	// printf("list size = %d\n", ft_list_size(first));
 
-	//-------ft_list_sort-------
+	// -------ft_list_sort-------
 	// ft_list_sort(&first, &ft_strcmp);
 	// while (first)
 	// {
@@ -170,11 +149,11 @@ int		main(int ac, char **av)
 	// }
 
 	//-------ft_list_remove_if-------
-	ft_list_remove_if(&first, "str4\n", &ft_strcmp, &free_function);
-	while (first)
-	{
-		printf("%s", first->data);
-		first = first->next;
-	}
+	// ft_list_remove_if(&first, "str4\n", &ft_strcmp, &free_function);
+	// while (first)
+	// {
+	// 	printf("%s", first->data);
+	// 	first = first->next;
+	// }
 	return (0);
 }

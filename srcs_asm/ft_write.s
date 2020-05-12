@@ -12,9 +12,13 @@ _ft_write:
 	
 	; ----- IF ERROR OCCURED -----
 	mov rdx, rax		; saving return value (= future errno) in rdx
-	sub rsp, 8			; stack must be aligned on 16 bytes boundary and call ___error add one address (8 bytes) on the stack
+	
+	push rdx			; caller-save register
+	
 	call ___error		; return in rax *int to errno
-	add rsp, 8			; stack realigned
+	
+	pop rdx				; restore caller-save register
+	
 	mov [rax], rdx		; moving return value of errored sys_write to *int errno location
 	mov rax, -1			; set return value to -1 because error occured during sys_write
 	
