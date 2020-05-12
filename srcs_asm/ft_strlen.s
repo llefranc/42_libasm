@@ -2,6 +2,8 @@
 	global	_ft_strlen
 
 	section .text
+	
+	; int	ft_strlen(char *str);
 _ft_strlen:
 	xor	rax, rax				; put rax to zero
 	mov	bl, byte [rdi]

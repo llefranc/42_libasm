@@ -4,6 +4,8 @@
 	extern	___error
 
 	section .text
+	
+	; char	*ft_strdup(const char *s1);
 _ft_strdup:
 	xor rdx, rdx
 
@@ -14,7 +16,7 @@ loop_s1_len:
 	push rdi						; saving on stack rdi because malloc func call
 	mov rdi, rdx					; first arg of malloc (len s1 + 1 for '\0')
 	call _malloc
-	pop rdi							; taking back from stack save rdi value
+	pop rdi							; taking back from stack saved rdi value
 	cmp rax, 0						; check if malloc return value is not NULL ptr
 	jne copy_s1						; if no malloc error we jump to copy instruction
 

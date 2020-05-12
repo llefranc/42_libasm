@@ -2,6 +2,8 @@
 	global	_ft_strcpy
 
 	section .text
+
+	; char	*ft_strcpy(char * dst, const char * src);
 _ft_strcpy:
 	xor	rax, rax				; putting rax to zero
 	cmp	byte [rsi + rax], 0		; if we reached the \0 of src
