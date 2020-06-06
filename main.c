@@ -6,7 +6,7 @@
 /*   By: lucaslefrancq <lucaslefrancq@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 12:35:43 by lucaslefran       #+#    #+#             */
-/*   Updated: 2020/05/12 07:23:30 by lucaslefran      ###   ########.fr       */
+/*   Updated: 2020/06/06 12:14:35 by lucaslefran      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,5 +155,13 @@ int		main(int ac, char **av)
 	// 	printf("%s", first->data);
 	// 	first = first->next;
 	// }
+
+    free(elem1);
+    free(elem2);
+    free(elem3);
+    free(elem4);
+    free(elem5);
+    free(elem6);
+    
 	return (0);
 }
