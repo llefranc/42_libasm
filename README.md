@@ -2,7 +2,7 @@
 
 Assembly yourself!
 
-![Alt text](https://github.com/lucaslefrancq/42-04_libasm/blob/main/philo_example.png)
+![Alt text](https://github.com/lucaslefrancq/42-04_libasm/blob/main/libasm_example.png)
 
 ## About
 
