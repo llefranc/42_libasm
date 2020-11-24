@@ -17,7 +17,7 @@ It's only made in assembly and the main goal was to understand how registers, st
 
 `This project was code for MACOS`
 
-### Building and running the program
+### Building and running the project
 
 1. Download/Clone this repo
 
