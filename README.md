@@ -1,12 +1,12 @@
-# Libasm (@42Paris)
+# libasm (@42Paris)
 
 Assembly yourself!
 
-![Alt text](https://github.com/lucaslefrancq/42-04_libasm/blob/master/libasm_example.png)
+![Alt text](https://github.com/lucaslefrancq/42_libasm/blob/master/libasm_example.png)
 
 ## About
 
-Libasm is the 6th project of the mandatory part of the cursus.
+Libasm is a project of the mandatory part of the cursus.
 It's only made in assembly and the main goal was to understand how registers, stack, systems calls and memory work.
  
 - For this we had to code in assembly 10 different functions :
@@ -21,14 +21,14 @@ It's only made in assembly and the main goal was to understand how registers, st
 
 1. Download/Clone this repo
 
-        git clone https://github.com/lucaslefrancq/42-04_libasm
+        git clone https://github.com/lucaslefrancq/42_libasm.git
 
 2. `cd` into the root directory, and run `make`
 
-        cd 42-04_libasm
+        cd 42_libasm
         make
 
-3.  compile your main.c or the main.c in this repo with `libasm.a` 
+3.  compile your `main.c` or the `main.c` in this repo with `libasm.a` 
     
 ## Sources
 
@@ -40,7 +40,7 @@ It's only made in assembly and the main goal was to understand how registers, st
 - [Introduction aux buffer overflows (FR)][6]
 - [Introduction à la rétroingénierie des binaires (FR)][7]
 
-[1]: https://github.com/lucaslefrancq/42-04_libasm/blob/main/libasm.en.subject.pdf
+[1]: https://github.com/lucaslefrancq/42_libasm/blob/master/libasm.en.subject.pdf
 [2]: https://www.lacl.fr/tan/asm
 [3]: https://stackoverflow.com/questions/13091987/x64-nasm-pushing-memory-addresses-onto-the-stack-call-function
 [4]: https://software.intel.com/content/www/us/en/develop/articles/introduction-to-x64-assembly.html
